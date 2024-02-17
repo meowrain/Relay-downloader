@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <link rel="stylesheet" href="/static/css/milligram.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+            <h1>Download Page</h1>
+            <blockquote>
+                <p><em>欢迎来到meowrain的中转下载站</em></p>
+            </blockquote>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <form id="downloadForm" action="/download/" method="get">
+                    <label for="urlInput">输入下载链接:</label>
+                    <input type="text" id="urlInput" name="url" placeholder="https://example.com/your-file.zip" required>
+                    <button type="submit" class="button-primary">下载文件</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
