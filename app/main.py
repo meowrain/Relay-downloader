@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import StreamingResponse, HTMLResponse,FileResponse
 import requests
+import uvicorn
 from urllib.parse import unquote
 from fastapi.staticfiles import StaticFiles
 app = FastAPI()
@@ -57,3 +58,6 @@ def download_file(url: str):
                              media_type='application/octet-stream',
                              headers={"Content-Disposition": file_info['filename'],
                                       "Content-Length": str(file_info['size']) if file_info['size'] else None})
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
